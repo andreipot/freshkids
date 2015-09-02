@@ -1,0 +1,9 @@
+{
+  "name": "freshkids",
+  "version": "1.0",
+  "private": true,
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "jquery-cycle2": "~2.1.6"
+  }
+}

@@ -1,0 +1,52 @@
+.container {
+	padding: 0 rem-calc(10);
+	position: relative;
+}
+
+figure {
+	margin: 0 0 rem-calc(21);
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+ul {
+	margin-left: 0;
+
+	li {
+		list-style-type: none;
+	}
+}
+
+ul.hearts_list {
+	li {
+	text-align: left;
+		p {
+			padding: 0 0 0 rem-calc(27) !important ;
+			margin: 0 0 rem-calc(6) 0 !important;
+			background: url('../images/home/icon2.png') no-repeat 0 rem-calc(6);
+		}
+	}
+}
+
+@mixin column-count($radius) {
+  -webkit-border-count: $radius;
+     -moz-border-count: $radius;
+      -ms-border-count: $radius;
+          border-count: $radius;
+}
+
+@mixin column-gap($radius) {
+  -webkit-border-gap: $radius;
+     -moz-border-gap: $radius;
+      -ms-border-gap: $radius;
+          border-gap: $radius;
+}

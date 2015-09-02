@@ -1,0 +1,288 @@
+.about {
+	.about_wrapper {
+		.about_img1 {
+			background: url('../images/about/about1.png') no-repeat center center;
+		  	-webkit-background-size: cover;
+		  	-moz-background-size: cover;
+		  	-o-background-size: cover;
+		  	background-size: cover;
+
+		  	.boy {
+		  		z-index: 49;
+		  		position: relative;
+
+		  		@media #{$small-only} {
+		  			overflow: hidden;
+			  		img {
+				  			width:115% !important;
+				  			max-width: 115% !important;
+				  			margin-left: -20%;
+				  		}
+			  	}
+
+
+			  	@media #{$medium-up} {
+			  		@include grid-column(12);
+			  		margin-top: rem-calc(-36);
+
+
+			  		img {
+			  			width: 92%;
+			  			margin: 0 auto;
+			  			display: table;
+			  			float: none;
+			  		}
+			  	}
+
+			  	@media #{$large-up} {
+		  			@include grid-column(8);
+		  			margin-top: rem-calc(19);
+
+			  		img {
+			  			margin-left: rem-calc(-63);
+			  		}
+			  	}
+		  	}
+
+		  	.cool { 
+			  	
+			  	z-index: 50;
+			  	position: relative;
+
+			  	@media #{$small-only} {
+			  		margin-top: rem-calc(16);
+			  		img {
+			  			width: 55%;
+			  			margin: 0 auto;
+			  			display: table;
+			  			float: none;
+			  		}
+			  	}
+			  	
+			  	@media #{$medium-up} {
+			  		@include grid-column(12);
+			  		margin-top: rem-calc(24);
+
+			  	}
+
+			  	@media #{$large-up} {
+			  		float: right !important;
+			  		@include grid-column(4);
+			  		margin-top: rem-calc(35);
+				  	img {
+				  		margin-left: rem-calc(-158);
+				  	}
+				}
+			}
+		}
+
+		.about_img2 {
+			
+			background: url('../images/about/about2.png') no-repeat center center;
+		  	-webkit-background-size: cover;
+		  	-moz-background-size: cover;
+		  	-o-background-size: cover;
+		  	background-size: cover;
+		  	overflow: hidden;
+
+		  	@media #{$large-up} {
+		  		height: rem-calc(400);
+		  	}
+
+		  	.happy {
+		  		z-index: 9999;
+			  	position: relative;
+
+			  	@media #{$small-only} {
+			  		margin-top: rem-calc(16);
+			  		img {
+			  			width: 55%;
+			  			margin: 0 auto;
+			  			display: table;
+			  			float: none;
+			  		}
+			  	}
+
+		  		@media #{$medium-up} {
+			  		@include grid-column(12);
+			  		margin-top: rem-calc(37);
+			  	}
+
+		  		@media #{$large-up} {
+		  			@include grid-column(6);
+		  			margin-top: rem-calc(37);
+
+			  		img {
+			  			margin-left: rem-calc(104);
+			  		}
+			  	}
+		  	}
+
+		  	.girl { 
+			  	z-index: 99;
+			  	position: relative;
+
+			  	@media #{$small-only} {
+			  		img {
+			  			width: 70%;
+			  			margin: 0 auto;
+			  			display: table;
+			  			float: none;
+			  		}
+			  	}
+
+			  	@media #{$medium-up} {
+			  		@include grid-column(12);
+			  		margin-top: rem-calc(-100);
+			  		
+			  	}
+
+			  	@media #{$large-up} {
+			  		@include grid-column(6);
+			  		margin-top: rem-calc(-53);
+
+				  	img {
+				  		margin-left: rem-calc(-30);
+				  	}
+				}
+			}
+		}
+
+		.we_are_3 {
+			.about_promise_lists {
+				.about_promise_list_wrapper {
+					@include grid-column(6);
+					margin: 0 auto;
+					float: none;
+					display: table;
+
+					@media #{$small-only} {
+						width: 100%;
+
+						ul {
+							width: 100% !important;
+						}
+					}
+
+					@media #{$medium-up} {
+						width: rem-calc(550);
+					}
+
+
+
+					ul {
+						@include grid-column(6);
+						margin-top: rem-calc(8);
+					}
+				}
+			}
+		}
+
+		.about_promise {
+			background: url('../images/about/about3.png') no-repeat center center;
+		  	-webkit-background-size: cover;
+		  	-moz-background-size: cover;
+		  	-o-background-size: cover;
+		  	background-size: cover;
+		  	height: rem-calc(395);
+		  	color: $white;
+
+
+		  	.about_promise_img {
+		  		margin: rem-calc(57) 0 rem-calc(14) 0;
+
+		  		@media #{$small-only} {
+		  			margin: rem-calc(27) 0 rem-calc(14) 0;
+		  		}
+		  	}
+		}
+
+		text-align: center;
+		.about_text {
+			padding-top: rem-calc(42);
+			padding-bottom: rem-calc(20);
+			text-align: center;
+			.title_box {
+				h1 {
+					color: $primary-color;
+					font-family: $font-asap;
+					font-style: rem-calc(44);
+					line-height: rem-calc(48);
+					margin:rem-calc(6) 0;
+
+					span {
+						font-weight: bold;
+					}
+
+					@media #{$small-only} {
+				  		padding: 0 rem-calc(35);
+				  	}
+				}
+			}
+
+			p {
+				font-family: $font-fresca; 
+				font-size: rem-calc(18);
+				line-height: rem-calc(24);
+				
+
+				span {
+					color: $primary-color;
+				}
+
+				@media #{$small-only} {
+					padding: 0 rem-calc(30);
+				}
+
+				@media #{$medium-up} {
+					padding: 0 rem-calc(30);
+				}
+
+				@media #{$large-up} {
+					padding: 0 rem-calc(190);
+				}
+			}
+
+			a {
+				float: none;
+				display: inline-block;
+			}
+		}
+
+		.fresh_voice {
+			background: url('../images/texture/line_paper_pattern_darken.jpg') left top repeat;
+			padding-bottom: 0;	
+
+			@media #{$large-up} {
+
+				p {
+					padding: 0 rem-calc(200);
+				}
+				
+			}
+
+			.blog-socials-bg {
+				background: none !important;
+
+				@media #{$medium-up} {
+					padding: rem-calc(20) 0 rem-calc(0) 0 !important;
+				}
+			}
+		}
+
+		
+
+		
+
+	}
+}
+
+
+#site-menu {
+	z-index: 100;
+}
+
+/* V.2.1 */
+
+
+

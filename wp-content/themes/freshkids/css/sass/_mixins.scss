@@ -1,0 +1,47 @@
+// Retina image
+//
+// Short retina mixin for setting background-image and -size. Note that the
+// spelling of `min--moz-device-pixel-ratio` is intentional.
+@mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x) {
+	background-image: url("#{$file-1x}");
+	background-size: $width-1x $height-1x;
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) {
+		background-image: url("#{$file-2x}");
+	}
+}
+
+// SVG background image with retina fallback.
+//
+// Set an SVG background image with a high-res/low-res fallback.
+@mixin img-svg-retina($svg-file, $fallback-file-1x, $fallback-file-2x, $width-1x, $height-1x) {
+	background-image: url("#{$svg-file}");
+	background-size: $width-1x $height-1x;
+
+	.no-svg & {
+		background-image: url("#{$fallback-file-1x}");
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (min--moz-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) {
+			background-image: url("#{$fallback-file-2x}");
+		}
+	}
+}
+
+// Placeholder text
+@mixin placeholder($color: $input-font-color) {
+	&::-moz-placeholder           { color: $color;   // Firefox
+		opacity: 1; } // See https://github.com/twbs/bootstrap/pull/11526
+	&:-ms-input-placeholder       { color: $color; } // Internet Explorer 10+
+	&::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}

@@ -1,0 +1,247 @@
+.moms {
+    /* MOMS */
+
+        .moms_img1 {
+            background: url('../images/moms/moms1.png') no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+
+            position: relative;
+
+
+            @media #{$large-up} {
+                height: auto;
+
+                .moms_box {
+                    margin-top: rem-calc(17);
+                }
+
+
+                img {
+                    padding: 0 ;
+                }
+            }
+
+            @media #{$medium-up} {
+                .moms_box {
+                        margin-top: rem-calc(87);
+                    }
+                }
+
+             @media #{$small-only} {
+                .moms_box {
+                        margin-top: rem-calc(60);
+
+                        img {
+                            width: 88%;
+                            margin:0 auto !important;
+                            float: none !important;
+                            display: table;
+                        }
+                    }
+                }
+
+        }
+
+        .tags_list {
+            float: none;
+            display: table;
+            margin: rem-calc(-17) auto rem-calc(22) auto;
+
+            li {
+                float: left;
+                margin-right: rem-calc(5);
+                @media #{$small-only} {
+                        margin:0 auto !important;
+                        float: none !important;
+                        display: table;
+                    }
+
+                a {
+                    color: $primary-color;
+                    margin: 0;
+                    padding: 0;
+                    font-weight: bold;
+                    font-size: rem-calc(22);
+                    line-height: rem-calc(28);
+                    text-transform: uppercase;
+
+                    
+                }
+            }
+        }
+}
+
+.news_block,
+#grid {
+    background: url('../images/texture/line_paper_pattern_darken.jpg') left top repeat;
+    display: table;
+    width :100%;
+}
+
+
+.news_items_list { /*
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+    -moz-column-gap: rem-calc(20);
+    -webkit-column-gap: rem-calc(20);
+    column-gap: rem-calc(20); */
+    padding: 0 rem-calc(16); 
+    text-align: left;
+} 
+
+#grid[data-columns]::before {
+    content: '4 .column.size-1of4';
+}
+
+@media #{$small-only} {
+    #grid[data-columns]::before {
+        content: '1 .column.size-1of1';
+    }
+}
+
+@media #{$medium-up} {
+    #grid[data-columns]::before {
+        content: '2 .column.size-1of2';
+    }
+}
+
+@media #{$large-up} {
+    #grid[data-columns]::before {
+        content: '4 .column.size-1of4';
+    }
+}
+
+/* Again, you’re free to use and define the classes: */
+.column { float: left; }
+.size-1of1 { width: 100%; }
+.size-1of2 { width: 50%; }
+.size-1of3 { width: 33.333%; }
+.size-1of4 { width: 25%; }
+
+.news_item_box { 
+    /* display: inline-block;
+   
+    width: 100%; */
+    background: $white;
+    float: left;
+     margin: rem-calc(20) 0 0 0;
+
+    .news_item_header {
+        padding: rem-calc(13) 0 rem-calc(10) 0;
+        float: left;
+        position: relative;
+        width: 100%;
+
+        .news_item_header_left {
+            .news__item_header_img {
+                width: rem-calc(42);
+                height: rem-calc(42);
+                float: left;
+                margin: 0 rem-calc(12) 0 rem-calc(15);
+
+                img {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+
+            .news_info {
+                float: left;
+                .news_item_title {
+                    color: $primary-color;
+                    margin: 0;
+                    font-family: $font-fresca; 
+                    font-size: rem-calc(18);
+                    line-height: rem-calc(24);
+                    @include clearfix();
+                }
+
+                .news_item_date {
+                    font-size: rem-calc(14);
+                    margin: 0;
+                    line-height: rem-calc(12);
+                }
+            }
+        }
+        
+        .news_item_header_socials {
+            position: absolute;
+            top: 22px;
+            right: 15px;
+
+            a {
+                margin-right: 0;
+                &[href*="facebook.com"] {
+                    width: 13px;
+                    height: 24px;
+                    display: block;
+                    background: url('../images/moms/fb.png') left top no-repeat;
+                }
+
+                &[href*="instagram.com"] {
+                    width: 25px;
+                    height: 24px;
+                    display: block;
+                    background: url('../images/moms/inst.png') left top no-repeat;
+                }
+
+                &[href*="twitter.com"] {
+                    width: 24px;
+                    height: 20px;
+                    display: block;
+                    background: url('../images/moms/tt.png') left top no-repeat;
+                }
+            }
+        }
+
+        
+    }
+
+    .news_item_img {
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    .news_item_content {
+        padding-bottom: rem-calc(15);
+        float: left;
+        p {
+            padding:  rem-calc(11)  rem-calc(17) 0  rem-calc(17);
+            margin: 0;
+            float: left;
+        }
+
+        a {
+            color: $red;
+            float: none;
+            display: inline-block;
+            font-size: rem-calc(14);
+        }
+    }
+}
+
+.button_block {
+    width: 100%;
+
+    .button {
+        margin: rem-calc(16) auto rem-calc(30) auto;
+        display: table;
+        float: none;
+    }
+}
+
+.news_block {
+    .blog-socials-bg {
+        background: none !important;
+
+        @media #{$medium-up} {
+            padding: rem-calc(20) 0 rem-calc(0) 0 !important;
+        }
+    }
+}

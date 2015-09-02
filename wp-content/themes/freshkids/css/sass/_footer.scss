@@ -1,0 +1,151 @@
+footer[role="contentinfo"] {
+	background-color: $primary-color;
+	color: #fff;
+	padding: rem-calc(26) 0;
+	position: relative;
+}
+
+.footer-col-1,
+.footer-col-2 {
+	@include grid-column(12);
+
+	@media #{$large-up} {
+		@include grid-column(12);
+	}
+}
+
+.footer-col-1 {
+	.menu {
+		list-style: none;
+		margin: rem-calc(9) auto rem-calc(21) auto;
+		padding: 0;
+		display: table;
+		float: none;
+		text-align: center;
+
+		li {
+			line-height: rem-calc(20);
+
+			& + li {
+				margin-top: rem-calc(7);
+			}
+
+			a {
+				color: #fff;
+				display: inline-block;
+				font-family: $font-menu;
+				font-size: rem-calc(16);
+				font-weight: 400;
+				line-height: 1.25;
+				text-transform: uppercase;
+			}
+		}
+
+		@media #{$small-only} {
+				li {
+					a {
+						display: table;
+						float: none;
+						margin: 0 auto;
+					}
+				}
+		}
+
+		@media #{$medium-up} {
+			li {
+				display: inline-block;
+
+				& + li {
+					margin-left: rem-calc(36);
+					margin-top: 0;
+				}
+			}
+		}
+
+		@media #{$large-up} {
+			text-align: left;
+		}
+	}
+}
+
+.footer-col-2 {
+	width: rem-calc(400);
+	display: table;
+	margin: 0 auto;
+	float: none;
+	text-align: center;
+
+
+	h2 {
+		color: $white;
+		font-size: rem-calc(22);
+		font-weight: bold;
+		margin: 0;
+	}
+
+	p {
+		color: $white;
+		font-size: rem-calc(14);
+		font-weight: 300;
+		margin: 0 0 rem-calc(10) 0;
+	}
+
+	.input-subs {
+		width:  rem-calc(275);
+		border:none;
+		float: left;
+		margin-right: rem-calc(10);
+		box-shadow: none;
+		font-size: rem-calc(14);
+		padding: rem-calc(18) rem-calc(12);
+		text-transform: capitalize;
+		color: #645b51;
+	}
+
+	.input-box {
+		.button {
+			font-size: rem-calc(16);
+			padding: rem-calc(9) rem-calc(16);
+		}
+		
+	}
+
+	@media #{$small-only} {
+		width: rem-calc(280);
+
+		.button {
+			margin: 0 auto rem-calc(25) auto;
+			display: table;
+			float: none;
+		}
+
+		.input-subs {
+			margin-right: 0;
+			}	
+	}
+}
+
+.footer-col-3 {
+	.footer-box {
+		margin: 0 auto;
+		display: table;
+
+		svg {
+			margin-right: rem-calc(8);
+		}
+	}
+
+	p {
+		text-align: center;
+		color: $white;
+		font-size: rem-calc(12);
+		font-weight: 300;
+		display: table;
+		margin: rem-calc(10) auto 0 auto;
+
+		a {
+			float: right;
+			color: $white;
+		}
+	}
+}

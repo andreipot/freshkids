@@ -1,0 +1,16 @@
+.button {
+	text-transform: uppercase;
+}
+
+.medium {
+	font-size: rem-calc(21);
+	padding: rem-calc(12) rem-calc(30) rem-calc(10) rem-calc(30);
+}
+
+.round {
+	border:none;
+
+	&:hover {
+		border:none !important;
+	}
+}

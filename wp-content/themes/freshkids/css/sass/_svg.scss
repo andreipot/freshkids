@@ -1,0 +1,96 @@
+*, *::after, *::before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	display: block; float: left; margin-right: 10px;
+}
+
+a.round:hover{
+	border: #666 1px solid;
+}
+
+.icon_24{
+	width: 24px; height: 24px; display: block;
+}
+
+.icon_28{
+	width: 28px; height: 28px; display: block;
+}
+
+.icon_36{
+	width: 36px; height: 36px; display: block;
+}
+
+.icon_80_60{
+	width: 80px; height: 60px; display: block;
+}
+
+.logo{
+	width: 140px; height: 42px; display: block;
+}
+
+.round{
+	border: #999 1px solid; border-radius: 50%; padding: 5px;
+}
+
+.color_blue{
+	fill: #3E59A1;
+}
+
+a:hover .color_blue{
+	fill: #5a76c1;
+	transition:fill .3s;
+}
+
+.color_gray{
+	fill: #ccc;
+}
+
+a:hover .color_gray{
+	fill: #dfdfdf;
+	transition:fill .3s;
+}
+
+.color_red{
+	fill: #EC4E50;
+}
+
+a:hover .color_red{
+	fill: #f66d6f;
+	transition:fill .3s;
+}
+
+.color_white{
+	fill: #FFFFFF;
+}
+
+.cloud_social{
+	-webkit-transform:translateZ(0);
+	transform:translateZ(0);
+}
+
+.cloud_social:hover{
+	-webkit-animation: wiggle 1s infinite linear;
+	animation: wiggle 1s infinite linear;
+}
+
+@media screen{
+	.hide{
+		display: none;
+	}
+	svg:not(:root){
+		overflow: hidden;
+	}
+}
+
+@-webkit-keyframes wiggle {
+	25%		{-webkit-transform:rotate(5deg);}
+	75%		{-webkit-transform:rotate(-5deg);}
+}
+@keyframes wiggle {
+	25%		{transform:rotate(5deg);}
+	75%		{transform:rotate(-5deg);}
+}

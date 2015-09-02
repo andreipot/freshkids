@@ -1,0 +1,253 @@
+header[role="banner"] {
+	background: $topbar-bg-color;
+	border-bottom: 1px solid #ddd;
+	height: rem-calc(71);
+
+	nav[role="navigation"] {
+		button {
+			background-color: transparent;
+			left: 0;
+			margin-bottom: 0;
+			outline: none;
+			position: absolute;
+			top: rem-calc(10);
+
+			.close-btn {
+					display: none;
+				}
+			
+
+			&.active {
+				.close-btn {
+					display: block;
+				}
+
+				.open-btn {
+					display: none !important;
+				}
+			}
+		}
+
+		@media #{$large-up} {
+			@include grid-column(7);
+
+			button {
+				display: none;
+			}
+		}
+	}
+}
+
+#logo {
+	@include grid-column(12);
+
+	height: rem-calc(70);
+	margin: 0;
+	padding: rem-calc(14) 0;
+	text-align: center;
+
+	@media #{$medium-up} {
+		@include grid-column(
+			$columns: 4,
+			$offset: 4
+		);
+
+		padding-left: rem-calc(28);
+
+		a {
+			display: table;
+		  	float: none;
+		  	margin: 0 auto;
+		}
+	}
+
+	@media #{$small-up} {
+		a {
+			display: table;
+		  	float: none !important;
+		  	margin: 0 auto;
+		}
+	}
+
+	@media #{$large-up} {
+		@include grid-column(
+			$columns: 2,
+			$offset: 0
+		);
+
+		text-align: left;
+	}
+
+	a {
+		@include img-svg-retina('../images/fresh-kids-logo.svg', '../images/fresh-kids-logo.png', '../images/fresh-kids-logo@2x.png', 139px, 42px);
+
+		display: inline-block;
+		height: 42px;
+		text-indent: -9999px;
+		width: 139px;
+	}
+}
+
+#site-menu {
+	background: $topbar-bg-color;
+	display: none;
+	left: 0;
+	overflow: hidden;
+	padding: rem-calc(7) 0 0 0;
+	position: absolute;
+	top: rem-calc(71);
+	z-index: 100;
+	width: 100%;
+
+	&.open {
+		display: block;
+	}
+
+	ul {
+		display: block;
+		float: right;
+		list-style: none;
+		margin: 0;
+		max-width: 360px;
+		padding: 0;
+		text-align: center;
+
+		// remove margin before applying grid column
+		@include grid-column(
+			$columns: 12,
+			$center: true
+		);
+
+		li {
+			
+			display: inline-block;
+
+			a {
+				display: block;
+				font-family: $topbar-link-font-family;
+				font-size: rem-calc(16);
+				font-weight: 400;
+				line-height: 1.125;
+				text-transform: uppercase;
+
+				svg {
+					margin: 0 auto;
+					margin-bottom: rem-calc(4);
+				}
+			}
+		}
+	}
+
+
+	@media #{$small-only} {
+		padding-bottom: rem-calc(60);
+
+		ul {
+			li {
+				margin: rem-calc(8) rem-calc(6);
+			}
+		}
+	}
+
+	@media #{$medium-up} {
+		padding: rem-calc(7) 0 0 0;
+
+		ul {
+			max-width: none;
+
+			li {
+				margin-bottom: 0;
+				margin: rem-calc(8) rem-calc(8);
+				margin-top: 0;
+			}
+		}
+	}
+
+	@media #{$large-up} {
+		border-bottom: none;
+		position: static;
+		width: auto !important;
+		display: table;
+		float: right;
+
+		padding: 0;
+
+		#site-menu {
+			margin-left: rem-calc(60);
+			border-bottom: 4px solid #ddd;
+		}
+
+		ul {
+			max-width: none;
+			padding-right: 0 !important;
+
+			li {
+				margin: rem-calc(7) rem-calc(8) 0 rem-calc(8);
+			}
+
+			li:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@media #{$xlarge-up} {
+		border-bottom: none;
+		display: block;
+		position: static;
+
+		padding: 0;
+
+		#site-menu {
+			margin-left: rem-calc(60);
+			border-bottom: 4px solid #ddd;
+		}
+
+		ul {
+			max-width: none;
+		}
+	}
+}
+
+.header-right {
+	display: none;
+
+	@media #{$medium-up} {
+		@include grid-column(4);
+
+		display: block;
+	}
+
+	@media #{$large-up} {
+		@include grid-column(3);
+	}
+
+}
+
+.social-media-icons {
+	@include clearfix();
+
+	float: right;
+	list-style: none;
+	margin: 0;
+
+	@media #{$medium-up} {
+		margin: 21px 0;
+	}
+
+	li {
+		float: left;
+
+		& + li {
+			margin-left: 7px;
+		}
+
+		a {
+			display: block;
+			height: rem-calc(28);
+			text-indent: -9999px;
+			width: rem-calc(28);
+			margin-right: 0;
+		}
+	}
+}

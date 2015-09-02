@@ -1,0 +1,144 @@
+/* SCHOOL */
+
+.school_img1 {
+	
+
+  	position: relative;
+
+  	@media #{$small-only} {
+  		padding-top: 180px;
+  		background: url('../images/school/school1.png') no-repeat 50% 0%;
+  	}
+
+  	@media #{$medium-up} {
+  		height: rem-calc(600);
+  		background: url('../images/school/school1.png') no-repeat center center;
+		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+  		position: relative;
+
+  		.kids {
+  			bottom: 0;
+  			position: absolute;
+  			width: 100%;
+  		}
+
+  		img {
+  			padding: 0 rem-calc(20);
+  			bottom: 0;
+  			margin: 0 auto;
+  			float: none;
+  			display: table;
+  		}
+  	}
+
+  	@media #{$large-up} {
+  		background: url('../images/school/school1.png') no-repeat center center;
+		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+  		height: auto;
+
+  		.kids {
+  			bottom: auto;
+  			position: relative;
+  			margin-top: rem-calc(10);
+  		}
+
+
+  		img {
+  			padding: 0 ;
+  		}
+  	}
+
+}
+
+.school_img2 {
+	background: url('../images/texture/pattern_blue.jpg') left top repeat ;
+	color: $white;
+
+	.table {
+		width: rem-calc(536);
+		position: relative;
+		
+		display: table;
+
+		@media #{$small-only} {
+	  		width: 100%;
+	  		padding: 0 rem-calc(20);
+	  		margin: rem-calc(50) 0 0  0 ;
+	  	}
+
+		@media #{$medium-up} {
+			margin: rem-calc(126) auto 0 auto;
+		}
+
+		@media #{$large-up} {
+			margin: rem-calc(30) auto 0 auto;
+		}
+
+		a {
+			margin: 0 auto;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: rem-calc(-45);
+			top: 50%;
+			margin-top: rem-calc(-45);
+		}
+	}
+
+	h3 {
+		color: $white;
+		font-weight: bold;
+		font-family: $font-asap;
+		margin: rem-calc(15) 0 rem-calc(7) 0;
+	}
+
+	p {
+		font-size: rem-calc(14);
+		
+		@media #{$small-only} {
+			margin: rem-calc(0) 0 rem-calc(33) 0;
+		}
+
+		@media #{$medium-up} {
+			margin: rem-calc(0) 0 rem-calc(126) 0;
+		}
+
+		@media #{$large-up} {
+			margin: rem-calc(0) 0 rem-calc(23) 0;
+		}
+	}
+}
+
+.photoshoot {
+	background: #b6b6b6;
+	
+	@media #{$small-only} {
+  		padding: rem-calc(125) 0 rem-calc(123) 0;
+
+  		h1 {
+  			padding: 0 rem-calc(10) !important;
+  		}
+  	}
+
+	@media #{$medium-up} {
+  		padding: rem-calc(273) 0 rem-calc(270) 0;
+  	}
+
+  	@media #{$large-up} {
+  		padding: rem-calc(173) 0 rem-calc(170) 0;
+  	}
+
+	h1 {
+		font-family: $font-asap;
+		font-style: rem-calc(44);
+		line-height: rem-calc(48);
+		color: $white;
+		padding: 0;
+	}
+}

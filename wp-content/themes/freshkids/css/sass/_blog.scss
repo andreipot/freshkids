@@ -1,0 +1,221 @@
+.blog {
+	background: url('../images/texture/line_paper_pattern_darken.jpg') left top repeat;
+
+	.blog_index {
+		background: none;
+		float: left;
+		width: 100%;
+
+		
+
+		.filter_box {
+			width: 100%;
+
+			.filter_items {
+				margin: rem-calc(20) auto;
+				display: table;
+				float: none;
+				  
+				button {
+					text-transform: uppercase;
+					color: $brown !important;
+					font-size: rem-calc(14);
+					padding: rem-calc(13) rem-calc(20);
+					margin:0;
+					font-family: $font-family-sans-serif;
+					font-weight: 300;
+					background: $white;
+					outline: none;
+					border-right: rem-calc(1) solid #ddd;
+				}
+
+				button:first-child {
+					@include side-radius(left, rem-calc(36));
+					padding-left: rem-calc(23);
+				}	
+
+				button:last-child {
+					@include side-radius(right, rem-calc(36));
+					border-right: 0;
+					padding-right: rem-calc(23);
+				}	
+
+				button:hover,
+				button.active {
+					color: $white !important;
+					background: $primary-color;
+				}
+
+				@media #{$small-only} {
+					width: 100%;
+					padding: 0 rem-calc(20);
+
+						button {
+							width: 100%;
+							float: left;
+							border-bottom: rem-calc(1) solid #ddd !important;
+							border-right: 0 !important;
+						}						
+
+						button:first-child {
+							@include side-radius(top, rem-calc(15));
+							@include side-radius(bottom, rem-calc(0));
+						}
+
+						button:last-child {
+							@include side-radius(bottom, rem-calc(15));
+							@include side-radius(top, rem-calc(0));
+							border:0;
+						}
+					}
+			}
+		}
+
+		
+	}
+
+
+
+	.blog-socials-bg {
+		background: none !important;
+
+		@media #{$medium-up} {
+			padding: rem-calc(20) 0 rem-calc(0) 0 !important;
+		}
+	}
+}
+
+.blog_index_items {
+	padding: 0 rem-calc(10);
+	text-align: left;
+
+	p {
+		font-family: $font-family-sans-serif !important;
+		line-height: rem-calc(21)  !important;
+		font-size: rem-calc(14)  !important;
+		padding: 0  !important;
+	}
+
+	.blog_index_list {
+		li {
+			width: 25%;
+			float: left;
+			margin-bottom: rem-calc(20);
+
+			@media #{$medium-up} {	
+				width:50%;	
+			}
+
+			@media #{$large-up} {
+				width:25%;	
+			}
+
+			@media #{$small-only} {
+				width:100%;
+
+			}
+
+			.blog_index_item {
+				margin: 0 rem-calc(10);
+				.blog_index_img {
+					padding-bottom: rem-calc(106);
+					position: relative;
+					overflow: hidden;
+
+					img {
+						width: 100%;
+						max-width: 100%;
+						transition: all .4s ease-in-out;
+					}
+
+					
+				}
+
+				&:hover {
+					.blog_index_img {
+						img {
+							transform: scale(1.1);
+						}
+					}
+
+					.blog_index_info {
+						height: rem-calc(196);
+					}
+
+				}
+
+				.blog_index_info {
+					background: $white;
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					border-top: rem-calc(3) solid $red;
+					height: rem-calc(106);
+					transition: height .4s ease-in-out;
+
+
+					.post_cat {
+						float: left;
+						width: 100%;
+						margin: rem-calc(12) rem-calc(20) rem-calc(1) rem-calc(20);
+
+						li {
+							float: left;
+							color: $brown;
+							font-weight: bold;
+							margin-right: rem-calc(4);
+							margin-bottom: 0;
+							width: auto;
+
+							a {
+								color: $brown;
+								font-weight: bold;
+								text-transform: uppercase;
+								margin-right: 0;
+							}
+						}
+					}
+
+					.post_desc {
+						margin: rem-calc(13) rem-calc(17) 0 rem-calc(17) ;
+						border-top: rem-calc(2) solid $primary-color;
+						display: inline-block;
+						padding-top: rem-calc(11);
+						height: rem-calc(74);
+						overflow: hidden;
+
+						p {
+							line-height: rem-calc(21);
+						}
+					}
+
+					.post_title {
+						color: $primary-color;
+						display: inline-block;
+						margin: 0 rem-calc(20);
+						font-family: $font-asap;
+						font-size: rem-calc(24);
+						font-weight: bold;
+						height: rem-calc(56);
+						overflow: hidden;
+						text-transform: uppercase;
+						line-height: rem-calc(28);
+					}
+				}
+			}
+		}
+	}
+}
+
+/* clear fix */
+.blog_index_list:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.filter_items:after {
+  content: '';
+  display: block;
+  clear: both;
+}
